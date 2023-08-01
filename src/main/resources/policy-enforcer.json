@@ -1,0 +1,37 @@
+{
+  "realm": "quickstart",
+  "auth-server-url": "http://localhost:8180",
+  "resource": "authz-servlet",
+  "credentials": {
+    "secret": "secret"
+  },
+  "enforcement-mode": "ENFORCING",
+		"paths": [
+			{
+				"path": "/employee/*",
+				"methods": [
+					{
+						"method": "GET",
+						"scopes": [
+							"GET"
+						]
+					},{
+						"method": "POST",
+						"scopes": [
+							"POST"
+						]
+					},{
+						"method": "PUT",
+						"scopes": [
+							"PUT"
+						]
+					},{
+						"method": "DELETE",
+						"scopes": [
+							"DELETE"
+						]
+					}
+				]
+			}
+		]
+}
